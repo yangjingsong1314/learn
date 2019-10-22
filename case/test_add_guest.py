@@ -10,7 +10,7 @@ class Test_Add_Guest(unittest.TestCase):
         self.em.con_mysql()
         self.gd = Create_Data()
         self.data = {}
-        sql = 'select id from sign_event where status=1;'
+        sql = 'select id from sign_event where status=1 and start_time>=now();'
         self.em.execute_sql(sql)
         self.a = self.em.get_allsql_result()
         self.data['eid'] = int(self.a[-1][0])
@@ -222,9 +222,9 @@ class Test_Add_Guest(unittest.TestCase):
         self.assertEqual(self.result,0)
     def testcase13(self):
         '''传入重复的phone参数添加嘉宾失败'''
-        sql = 'select phone from sign_guest where event_id !=10010'
-        self.em.execute_sql(sql)
-        self.data['phone'] = self.em.get_sql_result()
+        # sql = 'select phone from sign_guest where event_id !=10010'
+        # self.em.execute_sql(sql)
+        self.data['phone'] = '15716498453'
         self.r = requests.post(Add_GuestURL,self.data)
         self.em.con.autocommit(True)
         self.res = self.r.json()
