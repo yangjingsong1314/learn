@@ -5,6 +5,7 @@ file = DATAPATH+'/test_sec_get_event_list.csv'
 response_data = get_data(file)
 file = DATAPATH+'/ifo_auth.csv'
 auth_data = get_data(file)
+print('****************************************************************************')
 class Test_Sec_Get_Event_List(unittest.TestCase):
     '''带用户认证的发布会查询接口'''
     def setUp(self):
