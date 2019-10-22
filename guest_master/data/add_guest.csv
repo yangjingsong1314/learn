@@ -1,0 +1,9 @@
+status,message
+10000,add guest success
+10021,parameter error
+10022,event id null
+10023,event status is not available
+10024,event number is full
+10025,event has started
+10026,the event guest phone number repeat
+10027,phone error
