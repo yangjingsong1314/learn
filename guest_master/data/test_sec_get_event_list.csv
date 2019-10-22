@@ -1,6 +1,0 @@
-status,message
-200,success
-10011,user auth null
-10012,user auth fail
-10021,parameter error
-10022,query result is empty

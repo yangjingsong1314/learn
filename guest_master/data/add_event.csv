@@ -1,9 +1,0 @@
-status,message
-10000,add event success
-10021,parameter error
-10022,event id already exists
-10023,event name already exists
-10024,start_time format error
-10025,name cannot exceed 20 characters
-10026,eid length error
-10027,status can only be 0 or 1
